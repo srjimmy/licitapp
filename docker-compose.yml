@@ -1,0 +1,8 @@
+version: "3"
+services:
+  licitapp:
+    image: ghcr.io/srjimmy/licitapp:latest
+    container_name: licitapp
+    ports:
+      - 8080:80
+    restart: unless-stopped
