@@ -29,7 +29,7 @@ general de la Ley de Contratos de las Administraciones Públicas.
 1. Descarga el archivo `docker-compose.yml`:
 
 ~~~sh
-curl -sSL "https://raw.githubusercontent.com/srjimmy/licitapp/main/docker-compose.yml"
+curl -sSL "https://raw.githubusercontent.com/srjimmy/licitapp/master/docker-compose.yml"
 ~~~
 
 2. Despliega la aplicación:
