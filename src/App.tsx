@@ -1,5 +1,11 @@
-function App() {
-  return <></>;
-}
+import { CssBaseline } from "@mui/material";
+import Home from "@components/pages/Home";
 
-export default App;
+export default function App() {
+  return (
+    <>
+      <CssBaseline />
+      <Home />
+    </>
+  );
+}
