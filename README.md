@@ -1,7 +1,7 @@
 <p align="center">
-  <img alt="Master build workflow status" src="https://img.shields.io/github/actions/workflow/status/srjimmy/licitapp/build.yml?branch=master">
+  <img alt="Main build workflow status" src="https://img.shields.io/github/actions/workflow/status/srjimmy/licitapp/build.yml?branch=main">
   <img alt="License AGPL" src="https://img.shields.io/github/license/srjimmy/licitapp">
-  <img alt="Master package.json version" src="https://img.shields.io/github/package-json/v/srjimmy/licitapp/master">
+  <img alt="Main package.json version" src="https://img.shields.io/github/package-json/v/srjimmy/licitapp/main">
 </p>
 
 # 📈 LicitApp
@@ -29,7 +29,7 @@ general de la Ley de Contratos de las Administraciones Públicas.
 1. Descarga el archivo `docker-compose.yml`:
 
 ~~~sh
-curl -O "https://raw.githubusercontent.com/srjimmy/licitapp/master/docker-compose.yml"
+curl -O "https://raw.githubusercontent.com/srjimmy/licitapp/main/docker-compose.yml"
 ~~~
 
 2. Despliega la aplicación:
