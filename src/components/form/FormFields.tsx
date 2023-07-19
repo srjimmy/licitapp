@@ -1,6 +1,16 @@
 import { Box, TextField } from "@mui/material";
 
+import usePblStore from "@stores/pblStore";
+
 export default function FormFields() {
+  const pbl = usePblStore((state) => state.pbl);
+  const setPbl = usePblStore((state) => state.setPbl);
+
+  const handlePblChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = parseInt(event.target.value, 10);
+    setPbl(newValue);
+  };
+
   return (
     <Box>
       <Box sx={{ mb: 3 }}>
@@ -12,8 +22,8 @@ export default function FormFields() {
           size="small"
           variant="outlined"
           sx={{ width: "100%" }}
-          // value={}
-          // onChange={}
+          value={pbl}
+          onChange={handlePblChange}
         />
       </Box>
 
