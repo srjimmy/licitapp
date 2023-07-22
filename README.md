@@ -1,7 +1,7 @@
 <p align="center">
-  <img alt="Main build workflow status" src="https://img.shields.io/github/actions/workflow/status/srjimmy/licitapp/build.yml?branch=main">
-  <img alt="License AGPL" src="https://img.shields.io/github/license/srjimmy/licitapp">
-  <img alt="Main package.json version" src="https://img.shields.io/github/package-json/v/srjimmy/licitapp/main">
+  <img alt="Main build workflow status" src="https://img.shields.io/github/actions/workflow/status/srjimmy/licitapp/build.yml?branch=main" />
+  <img alt="License AGPL" src="https://img.shields.io/github/license/srjimmy/licitapp" />
+  <img alt="Main package.json version" src="https://img.shields.io/github/package-json/v/srjimmy/licitapp/main" />
 </p>
 
 # 📈 LicitApp
@@ -19,6 +19,8 @@ Para obtener más información sobre este tema, se puede consultar el
 [artículo 85](https://https://boe.es/buscar/act.php?id=BOE-A-2001-19995&p=20180505&tn=1#a85)
 del Real Decreto 1098/2001, de 12 de octubre, por el que se aprueba el Reglamento
 general de la Ley de Contratos de las Administraciones Públicas.
+
+![Demo de LicitApp](./demo.png)
 
 ## Autor
 
