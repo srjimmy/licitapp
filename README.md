@@ -46,12 +46,6 @@ docker compose up -d
 http://localhost:8080
 ~~~
 
-## Utilizado por
-
-Este proyecto es utilizado por las siguientes entidades:
-
-- [Consorcio de la Ciudad de Toledo](https://consorciotoledo.com/)
-
 ## Licencia
 
 LicitApp está sujeto a la licencia GNU Affero General Public License v3.0
