@@ -1,4 +1,4 @@
-import { ILicitadores } from "@services/licitapp/interfaces";
+import { ILicitador } from "@services/licitapp/interfaces";
 import { mediaOfertas, maxOfertas } from "@services/licitapp/lictaux";
 
 /**
@@ -7,7 +7,7 @@ import { mediaOfertas, maxOfertas } from "@services/licitapp/lictaux";
  * Cuando, concurriendo un solo licitador, sea inferior al presupuesto base de
  * licitación en más de 25 unidades de porcentaje.
  */
-export function casoUno(presupuestoBase: number, licitadores: ILicitadores) {
+export function casoUno(presupuestoBase: number, licitadores: ILicitador[]) {
   const [lictA, ...resto] = [...licitadores];
 
   lictA.temeraria = lictA.oferta < presupuestoBase * 0.75;
@@ -21,7 +21,7 @@ export function casoUno(presupuestoBase: number, licitadores: ILicitadores) {
  * Cuando concurran dos licitadores, la que sea inferior en más de 20 unidades
  * de porcentaje a la otra oferta.
  */
-export function casoDos(licitadores: ILicitadores) {
+export function casoDos(licitadores: ILicitador[]) {
   const [lictA, lictB, ...resto] = [...licitadores];
 
   lictA.temeraria = lictA.oferta < lictB.oferta * 0.8;
@@ -40,7 +40,7 @@ export function casoDos(licitadores: ILicitadores) {
  * En cualquier caso, se considerará desproporcionada la baja superior a
  * 25 unidades de porcentaje respecto al presupuesto base.
  */
-export function casoTres(presupuestoBase: number, licitadores: ILicitadores) {
+export function casoTres(presupuestoBase: number, licitadores: ILicitador[]) {
   const licts = [...licitadores];
 
   const media: number =
@@ -68,7 +68,7 @@ export function casoTres(presupuestoBase: number, licitadores: ILicitadores) {
  * si el número de las restantes ofertas es inferior a tres, la nueva media se
  * calculará sobre las tres ofertas de menor cuantía.
  */
-export function casoCuatro(licitadores: ILicitadores) {
+export function casoCuatro(licitadores: ILicitador[]) {
   const licts = [...licitadores];
 
   let media: number = mediaOfertas(licts);

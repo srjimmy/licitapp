@@ -1,4 +1,4 @@
-import { ILicitadores } from "@services/licitapp/interfaces";
+import { ILicitador } from "@services/licitapp/interfaces";
 import {
   casoUno,
   casoDos,
@@ -8,7 +8,7 @@ import {
 
 export default function licitacion(
   presupuestoBase: number,
-  licitadores: ILicitadores
+  licitadores: ILicitador[]
 ) {
   const numLics = licitadores.length;
 

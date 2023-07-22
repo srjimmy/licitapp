@@ -1,12 +1,12 @@
-import { ILicitadores } from "@services/licitapp/interfaces";
+import { ILicitador } from "@services/licitapp/interfaces";
 
 /**
  * Calcula la media de las ofertas de los licitadores, excluyendo aquellos
  * que se encuentran en la lista de exclusiones.
  */
 export function mediaOfertas(
-  licitadores: ILicitadores,
-  exclusiones: ILicitadores = []
+  licitadores: ILicitador[],
+  exclusiones: ILicitador[] = []
 ) {
   let total: number = 0;
   let contador: number = 0;
@@ -29,7 +29,7 @@ export function mediaOfertas(
 /**
  * Encuentra el objeto u objetos con ofertas máximas dentro de la lista de licitadores.
  */
-export function maxOfertas(licitadores: ILicitadores, cantidad: number = 1) {
+export function maxOfertas(licitadores: ILicitador[], cantidad: number = 1) {
   return [...licitadores]
     .sort((a, b) => b.oferta - a.oferta)
     .slice(0, cantidad);
