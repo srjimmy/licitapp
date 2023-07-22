@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 
 import Header from "@components/layout/Header";
+import Footer from "@components/layout/Footer";
 import Form from "@components/form/Form";
 import Result from "@components/result/Result";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Container maxWidth="lg">
         <Result />
       </Container>
+      <Footer />
     </>
   );
 }
