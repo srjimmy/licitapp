@@ -1,5 +1,5 @@
 import { Box, Button } from "@mui/material";
-import { Add, Remove, RestartAlt, PlayArrow } from "@mui/icons-material";
+import { Add, Remove, Print, RestartAlt, PlayArrow } from "@mui/icons-material";
 
 import usePblStore from "@stores/pblStore";
 import useLicitadoresStore from "@stores/licitadoresStore";
@@ -14,6 +14,10 @@ export default function FormButtons() {
   const handleFormReset = () => {
     resetPbl();
     resetLicitador();
+  };
+
+  const handlePagePrint = () => {
+    window.print();
   };
 
   return (
@@ -34,6 +38,15 @@ export default function FormButtons() {
         onClick={rmLicitador}
       >
         <Remove />
+      </Button>
+
+      <Button
+        color="secondary"
+        variant="contained"
+        sx={{ width: "100%" }}
+        onClick={handlePagePrint}
+      >
+        <Print />
       </Button>
 
       <Button
