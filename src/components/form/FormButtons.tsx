@@ -1,29 +1,19 @@
 import { Box, Button } from "@mui/material";
+import { Add, Remove, RestartAlt, PlayArrow } from "@mui/icons-material";
 
 import usePblStore from "@stores/pblStore";
 import useLicitadoresStore from "@stores/licitadoresStore";
-import useResultadosStore from "@stores/resultadosStore";
 
 export default function FormButtons() {
-  const pbl = usePblStore((state) => state.pbl);
-  const resetPbl = usePblStore((state) => state.resetPbl);
-
-  const licitadores = useLicitadoresStore((state) => state.licitadores);
   const addLicitador = useLicitadoresStore((state) => state.addLicitador);
   const rmLicitador = useLicitadoresStore((state) => state.rmLicitador);
+
+  const resetPbl = usePblStore((state) => state.resetPbl);
   const resetLicitador = useLicitadoresStore((state) => state.resetLicitador);
 
-  const setPbl = useResultadosStore((state) => state.setPbl);
-  const calcLicitacion = useResultadosStore((state) => state.calcLicitacion);
-
-  const resetForm = () => {
+  const handleFormReset = () => {
     resetPbl();
     resetLicitador();
-  };
-
-  const resultados = () => {
-    setPbl(pbl);
-    calcLicitacion(pbl, licitadores);
   };
 
   return (
@@ -34,7 +24,7 @@ export default function FormButtons() {
         sx={{ width: "100%" }}
         onClick={addLicitador}
       >
-        Añadir
+        <Add />
       </Button>
 
       <Button
@@ -43,25 +33,25 @@ export default function FormButtons() {
         sx={{ width: "100%" }}
         onClick={rmLicitador}
       >
-        Quitar
+        <Remove />
       </Button>
 
       <Button
-        color="secondary"
+        color="warning"
         variant="contained"
         sx={{ width: "100%" }}
-        onClick={resetForm}
+        onClick={handleFormReset}
       >
-        Reset
+        <RestartAlt />
       </Button>
 
       <Button
+        type="submit"
         color="primary"
         variant="contained"
         sx={{ width: "100%" }}
-        onClick={resultados}
       >
-        Calcular
+        <PlayArrow />
       </Button>
     </Box>
   );
