@@ -22,10 +22,6 @@ general de la Ley de Contratos de las Administraciones Públicas.
 
 ![LicitApp](./licitapp.png)
 
-## Autor
-
-- [@srjimmy](https://www.github.com/srjimmy)
-
 ## Instalación con Docker
 
 1. Descarga el archivo `docker-compose.yml`:
@@ -45,6 +41,10 @@ docker compose up -d
 ~~~
 http://localhost:8080
 ~~~
+
+## Autor
+
+- [@srjimmy](https://www.github.com/srjimmy)
 
 ## Licencia
 
