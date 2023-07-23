@@ -1,24 +1,24 @@
-import { Box, Typography, IconButton } from "@mui/material";
+import { Box, Paper, Typography, IconButton } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <Box
+    <Paper
       sx={{
-        position: "static",
+        position: "fixed",
         bottom: 0,
         width: "100%",
       }}
       component="footer"
+      variant="elevation"
     >
       <Box
         sx={{
           justifyContent: "space-evenly",
           alignItems: "center",
           display: "flex",
-          mb: 1,
           mt: 1,
         }}
       >
@@ -35,6 +35,6 @@ export default function Footer() {
           <GitHub />
         </IconButton>
       </Box>
-    </Box>
+    </Paper>
   );
 }

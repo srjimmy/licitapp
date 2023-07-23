@@ -12,7 +12,10 @@ export default function Home() {
       <Container maxWidth="sm">
         <Form />
       </Container>
-      <Container maxWidth="lg">
+      <Container
+        maxWidth="lg"
+        sx={{ display: "flex", flexDirection: "column" }}
+      >
         <Result />
       </Container>
       <Footer />
