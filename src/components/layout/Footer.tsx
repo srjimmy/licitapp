@@ -1,19 +1,17 @@
-import { Box, Paper, Typography, IconButton } from "@mui/material";
+import { Box, Typography, IconButton } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <Paper
+    <Box
       sx={{
-        position: "fixed",
+        position: "static",
         bottom: 0,
         width: "100%",
       }}
       component="footer"
-      variant="outlined"
-      square
     >
       <Box
         sx={{
@@ -24,7 +22,7 @@ export default function Footer() {
           mt: 1,
         }}
       >
-        <Typography variant="caption" color="initial">
+        <Typography variant="caption">
           © {currentYear} LicitApp. Licenciado bajo AGPLv3.
         </Typography>
         <IconButton
@@ -37,6 +35,6 @@ export default function Footer() {
           <GitHub />
         </IconButton>
       </Box>
-    </Paper>
+    </Box>
   );
 }
