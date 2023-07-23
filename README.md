@@ -20,7 +20,7 @@ Para obtener más información sobre este tema, se puede consultar el
 del Real Decreto 1098/2001, de 12 de octubre, por el que se aprueba el Reglamento
 general de la Ley de Contratos de las Administraciones Públicas.
 
-![Demo de LicitApp](./demo.png)
+![LicitApp](./licitapp.png)
 
 ## Autor
 
