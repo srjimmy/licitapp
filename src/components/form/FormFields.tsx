@@ -10,7 +10,7 @@ export default function FormFields() {
   const setPbl = usePblStore((state) => state.setPbl);
 
   const handlePblChange = (event: HIE) => {
-    const newValue = parseInt(event.target.value, 10);
+    const newValue = parseFloat(event.target.value);
     setPbl(newValue);
   };
 
@@ -23,7 +23,7 @@ export default function FormFields() {
   };
 
   const handleOfertaChange = (index: number, event: HIE) => {
-    const newOferta = parseInt(event.target.value, 10);
+    const newOferta = parseFloat(event.target.value);
     setLicitador(index, licitadores[index].nombre, newOferta);
   };
 
