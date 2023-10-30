@@ -70,23 +70,21 @@ export function casoTres(presupuestoBase: number, licitadores: ILicitador[]) {
  */
 export function casoCuatro(licitadores: ILicitador[]) {
   const licts = [...licitadores];
+  const media = mediaOfertas(licts);
 
-  let media: number = mediaOfertas(licts);
-  const lictsInferior = licts.filter((lict) => lict.oferta < media * 0.9);
   const lictsSuperior = licts.filter((lict) => lict.oferta > media * 1.1);
 
-  if (lictsSuperior.length > 0) {
-    media = mediaOfertas(licts, lictsSuperior);
-  }
+  if (lictsSuperior.length === 0) {
+    const numLictsRestantes = licts.length - lictsSuperior.length;
+    const lictsParaConsiderar =
+      numLictsRestantes < 3
+        ? licts.slice(0, 3)
+        : licts.filter((lict) => lict.oferta <= media * 1.1);
 
-  if (lictsInferior.length < 3) {
-    const lictsTresOfertasMenorCuantia = licts
-      .sort((a, b) => a.oferta - b.oferta)
-      .slice(0, 3);
-    media = mediaOfertas(lictsTresOfertasMenorCuantia);
-  }
+    const nuevaMedia = mediaOfertas(lictsParaConsiderar);
 
-  licts.forEach((lict) => (lict.temeraria = lict.oferta < media * 0.9));
+    licts.forEach((lict) => (lict.temeraria = lict.oferta < nuevaMedia * 0.9));
+  }
 
   return licts;
 }
